@@ -1,4 +1,4 @@
-#!/bin/bashi
+#!/bin/bash
 
 #include <stdio.h>
 
