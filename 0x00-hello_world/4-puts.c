@@ -2,7 +2,7 @@
 /**
  * main - Entry point of the program
  *
- * Description: This function prints a simple message to the standard output using puts function.
+ * his function prints a simple message using puts function.
  *
  * Return: 0 (Success)
  */
