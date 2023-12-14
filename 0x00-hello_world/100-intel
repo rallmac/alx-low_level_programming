@@ -1,12 +1,2 @@
-#include <stdio.h>
-/**
- * main - Entry point of the program
- *
- * his function prints a simple message using printf function.
- *
- * Return: 0 (Success)
- */
-int main(void)
-	{
-		return (0);
-	}
+#!/bin/bash
+gcc-S-masm=intel $CFILE
