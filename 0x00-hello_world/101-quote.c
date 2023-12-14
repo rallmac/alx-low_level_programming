@@ -1,12 +1,12 @@
 #include <stdio.h>
 /**
- * Header file
+ * main - Entry point of the program
  *
- * Progam that prints a statement without the printf and putf function
+ * his function prints a simple message without puts or printf function.
  *
- * return 1
+ * Return: 1 (error)
  */
-int main(1)
+int main(void)
 	{
 		echo "and that piece of art is useful" - Dora Korpar, 2015 - 10 - 19";
 		return (1);
