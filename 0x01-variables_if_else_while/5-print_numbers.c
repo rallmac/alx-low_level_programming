@@ -12,13 +12,17 @@
 
 int main(void)
 {
-	int a;
-
-	for (a = 0; a <= 9; a++)
-	{
-		printf("%d", a);
-	}
-	printf("\n");
+	putchar('0');
+	putchar('1');
+	putchar('2');
+	putchar('3');
+	putchar('4');
+	putchar('5');
+	putchar('6');
+	putchar('7');
+	putchar('8');
+	putchar('9');
+	putchar('\n');
 
 	return (0);
 }
