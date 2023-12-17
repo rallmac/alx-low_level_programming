@@ -1,0 +1,38 @@
+#include <stdlib.h>
+#include <time.h>
+#include <stdio.h>
+
+/**
+ * main - Entry point of the program
+ *
+ * this program prints a combination of two numbers in two places
+ *
+ * Return: 0 (Success)
+ */
+
+int main(void)
+{
+		for (int i = 0; i <= 99; i++)
+		{
+			for (int j = i; j <= 99; j++)
+			{
+				if (i != j)
+				{
+					putchar('0' + i / 10);
+					putchar('0' + i % 10);
+					putchar(' ');
+					putchar('0' + j / 10);
+					putchar('0' + j % 10);
+
+					if (i != 98 || j != 99)
+					{
+						putchar(',');
+						putchar(' ');
+					}
+				}
+			}
+
+		} putchar('\n');
+	return (0);
+}
+
