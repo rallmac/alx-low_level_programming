@@ -1,3 +1,5 @@
+#include <stdlib.h>
+#include <time.h>
 #include <stdio.h>
 
 /**
@@ -10,7 +12,9 @@
 
 int main(void)
 {
-	for (int digit = 0; digit <= 9; digit++)
+	int digit;
+
+	for (digit = 0; digit <= 9; digit++)
 	{
 		putchar('0' + digit);
 	}
@@ -19,6 +23,7 @@ int main(void)
 
 	return (0);
 }
+
 
 
 
