@@ -6,20 +6,6 @@
  * jack_bauer - Prints every minute of the day of Jack Bauer
  */
 
-void jack_bauer(void);
-
-/**
- * main - Entry point of the program
- *
- * Return: 0 (Success)
- */
-
-int main(void)
-{
-	jack_bauer();
-	return (0);
-}
-
 void jack_bauer(void)
 {
 	int hour, minute;
@@ -33,3 +19,15 @@ void jack_bauer(void)
 	}
 }
 
+
+/**
+ * main - Entry point of the program
+ *
+ * Return: 0 (Success)
+ */
+
+int main(void)
+{
+	jack_bauer();
+	return (0);
+}
