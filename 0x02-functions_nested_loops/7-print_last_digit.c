@@ -15,11 +15,8 @@ int printlastdigit(int n)
 
 	if (n < 0)
 		n = -n;
-
 	lastDigit = n % 10;
-
 	putchar('0' + lastDigit);
-
 	return (lastDigit);
 }
 
@@ -35,6 +32,5 @@ int main(void)
 	int lastDigitValue = printlastdigit(number);
 
 	printf("\nThe last digit of %d is: %d\n", number, lastDigitValue);
-
 	return (0);
 }
