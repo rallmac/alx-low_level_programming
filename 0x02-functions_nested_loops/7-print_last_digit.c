@@ -3,13 +3,13 @@
 #include <stdio.h>
 
 /**
- * print_last_digit - Prints the last digit of a number
+ * printlastdigit - Prints the last digit of a number
  * @n: The number to extract the last digit from
  *
  * Return: The value of the last digit
  */
 
-int print_last_digit(int n)
+int printlastdigit(int n)
 {
 	int lastDigit;
 
@@ -32,7 +32,7 @@ int print_last_digit(int n)
 int main(void)
 {
 	int number = -456;
-	int lastDigitValue = print_last_digit(number);
+	int lastDigitValue = printlastdigit(number);
 
 	printf("\nThe last digit of %d is: %d\n", number, lastDigitValue);
 
