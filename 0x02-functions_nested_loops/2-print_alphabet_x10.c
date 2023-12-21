@@ -1,16 +1,12 @@
-#include <stdlib.h>
-#include <time.h>
-#include <stdio.h>
+#include "main.h"
 
 /**
- * main - Entry point of the program
+ * print_alphabet_x10 - print the alphabet 10 times
  *
- * this program prints a to z in lowecase 10 times
- *
- * Return: 0 (Success)
+ * Return: void
  */
 
-int main(void)
+void print_alphabet_x10(void)
 {
 	int a;
 	char b;
@@ -20,10 +16,11 @@ int main(void)
 
 		for (b = 'a'; b <= 'z'; b++)
 		{
-			putchar(b);
-		} putchar('\n');
+			_putchar(b);
+		}
+		_putchar('\n');
 
 	}
-	return (0);
+
 }
 
