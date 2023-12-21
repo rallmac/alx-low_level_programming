@@ -1,6 +1,4 @@
-#include <stdlib.h>
-#include <time.h>
-#include <stdio.h>
+#include "main.h"
 
 /**
  * _isalpha - Checks if the character is alphabetic
@@ -12,24 +10,10 @@
 
 int _isalpha(int c)
 {
-	return ((c >= 'a' && c <= 'z') || (c >= 'A' && c <= 'Z'));
-}
-
-/**
- * main - Entry point of the program
- *
- * Return: 0 (Success)
- */
-
-int main(void)
-{
-	char checkChar = 'G';
-
-	if (_isalpha(checkChar))
-		printf("%c is an alphabetic character.\n", checkChar);
-	else
-		printf("%c is not an alphabetic character.\n", checkChar);
+	if ((c >= 65 && c <= 97) || (c >= 97 && c <= 122))
+	{
+		return (1);
+	}
 
 	return (0);
 }
-
