@@ -1,3 +1,4 @@
+#include "main.h"
 #include <stdlib.h>
 #include <time.h>
 #include <stdio.h>
@@ -15,33 +16,17 @@ int print_sign(int n)
 {
 	if (n > 0)
 	{
-	putchar('+');
+	_putchar(43);
 	return (1);
 	}
-	else if (n == 0)
+	else if (n < 0)
 	{
-	putchar('0');
-	return (0);
+	_putchar(45);
+	return (-1);
 	}
 	else
 	{
-	putchar('-');
-	return (-1);
-	}
-}
-
-/**
- * main - Entry point of the program
- *
- * Return: 0 (Success)
- */
-
-int main(void)
-{
-	int number = -7;
-	int result = print_sign(number);
-
-	printf("\nResult: %d\n", result);
-
+	_putchar(48);
 	return (0);
+	}
 }
