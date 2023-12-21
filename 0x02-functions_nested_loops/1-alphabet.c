@@ -1,23 +1,19 @@
-#include <stdlib.h>
-#include <time.h>
-#include <stdio.h>
+#include "main.h"
 
 /**
- * main - Entry point of the program
+ * print_alphabet - Make the alphabet
  *
- * this program prints a to z in lowecase
- *
- * Return: 0 (Success)
+ * Return:void
  */
 
-int main(void)
+void print_alphabet(void)
 {
 	char a;
 
 	for (a = 'a'; a <= 'z'; a++)
 	{
-		putchar(a);
-	} putchar('\n');
-	return (0);
+		_putchar(a);
+	}
+	_putchar('\n');
 }
 
