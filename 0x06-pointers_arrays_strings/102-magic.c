@@ -1,5 +1,11 @@
 #include <stdio.h>
 
+/**
+ * main - entry point of the program
+ * adding a line to the code to print n[2] = 98
+ * Return: always 0
+ */
+
 int main(void)
 {
 	int n;
