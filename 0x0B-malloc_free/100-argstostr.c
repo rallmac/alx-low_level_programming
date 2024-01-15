@@ -8,38 +8,40 @@
  *
  * Return: A pointer to the concatenated string, or NULL on failure
  */
+
 char *argstostr(int ac, char **av)
 {
-	int totalLength, i, j, k;
-	char *result;
+	int i, j, len, total_len;
+	char *str;
 
 	if (ac == 0 || av == NULL)
 		return (NULL);
 
+	total_len = 0;
 	for (i = 0; i < ac; i++)
 	{
-		for (j = 0; av[i][j]; j++)
-		{
-			totalLength++;
-		}
-		totalLength++;
+		len = 0;
+		while (av[i][len])
+		len++;
+		total_len += len + 1;
 	}
 
-	result = malloc(totalLength + 1);
-
-	if (result == NULL)
+	str = malloc(total_len + 1);
+	if (str == NULL)
 		return (NULL);
 
+	len = 0;
 	for (i = 0; i < ac; i++)
 	{
-		for (j = 0; av[i][j]; j++)
-		{
-			result[k++] = av[i][j];
-		}
-		result[k++] = '\n';
+		j = 0;
+		while (av[i][j])
+	{
+		str[len++] = av[i][j++];
+	}
+	str[len++] = '\n';
 	}
 
-	result[k] = '\0';
+	str[len] = '\0';
 
-	return (result);
+	return (str);
 }
