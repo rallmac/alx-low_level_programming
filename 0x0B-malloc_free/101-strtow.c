@@ -1,9 +1,11 @@
 #include "main.h"
 #include <stdio.h>
 #include <stdlib.h>
-#include "main.h"
-#include <stdio.h>
-#include <stdlib.h>
+
+int word_length(char *str);
+int count_words(char *str);
+char **strtow(char *str);
+
 /**
  * is_space - checks if a character is a space
  * @c: character to check
