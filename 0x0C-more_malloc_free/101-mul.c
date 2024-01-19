@@ -1,6 +1,7 @@
 #include "main.h"
 #include <stdio.h>
 #include <stdlib.h>
+#include <string.h>
 
 char *multiply(char *num1, char *num2);
 char is_digit(char c);
@@ -50,7 +51,53 @@ int main(int argc, char *argv[])
   */
 char *multiply(char *num1, char *num2)
 {
-	return ("123");
+	int len1, len2, i, j, carry, digit1, digit2, product, start;
+	char *result;
+
+	len1 = str_len(num1);
+	len2 = str_len(num2);
+
+	result = malloc((len1 + len2 + 1) * sizeof(char));
+	if (result == NULL)
+	{
+		printf("Error: Memory allocation failed\n");
+		exit(98);
+	}
+
+	for (i = 0; i < len1 + len2; i++)
+	{
+	result[i] = '0';
+	}
+	result[len1 + len2] = '\0';
+
+	for (i = len1 - 1; i >= 0; i--)
+	{
+	carry = 0;
+	digit1 = num1[i] - '0';
+
+	for (j = len2 - 1; j >= 0; j--)
+	{
+		digit2 = num2[j] - '0';
+		product = (result[i + j + 1] - '0') + digit1 * digit2 + carry;
+		result[i + j + 1] = (product % 10) + '0';
+		carry = product / 10;
+	}
+
+	result[i] += carry;
+	}
+
+	start = 0;
+	while (result[start] == '0' && result[start + 1] != '\0')
+	{
+	start++;
+	}
+
+	for (i = 0; i <= len1 + len2 - start; i++)
+	{
+	result[i] = result[start + i];
+	}
+
+	return (result);
 }
 
 /**
@@ -72,9 +119,8 @@ char is_digit(char c)
  */
 char str_len(char *str)
 {
-	int length;
+	int length = 0;
 
-	length = 0;
 	while (*str)
 	{
 		length++;
