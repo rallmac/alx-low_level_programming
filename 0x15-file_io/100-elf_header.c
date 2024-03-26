@@ -46,7 +46,7 @@ void check_elf(unsigned char *e_ident)
  *
  * Description: Magic numbers are separated by spaces.
  */
-void print_magic_file(unsigned char *e_ident)
+void print_magic(unsigned char *e_ident)
 {
 	int index;
 
@@ -296,7 +296,7 @@ int main(int __attribute__((__unused__)) argc, char *argv[])
 
 	check_elf(header->e_ident);
 	printf("ELF Header:\n");
-	print_magic_file(header->e_ident);
+	print_magic(header->e_ident);
 	print_class(header->e_ident);
 	print_data(header->e_ident);
 	print_version(header->e_ident);
