@@ -10,7 +10,7 @@
  */
 int main(void)
 {
-	chars;
+	char *s;
 
 	s = "cisfun";
 	printf("%lu\n", hash_djb2((unsigned char *)s));
